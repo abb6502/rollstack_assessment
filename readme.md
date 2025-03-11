@@ -57,13 +57,10 @@ A robust, PostgreSQL-backed job queue system with REST API endpoints for job man
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
    ```
-
-4. **Configure environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your database credentials
-   ```
-
 ## 🚦 Usage
+
+```bash
+  npx tsx demo.ts
+```
 
 ### Start the server
