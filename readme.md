@@ -33,8 +33,8 @@ A robust, PostgreSQL-backed job queue system with REST API endpoints for job man
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd job-queue-system
+   git clone https://github.com/abb6502/rollstack_assessment.git
+   cd rollstack_assessment
    ```
 
 2. **Install dependencies**
