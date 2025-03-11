@@ -1,0 +1,14 @@
+CREATE TABLE jobs (
+    id SERIAL PRIMARY KEY,
+    payload JSONB NOT NULL,
+    status TEXT CHECK (status IN ('waiting', 'in-progress', 'completed', 'failed')) DEFAULT 'waiting',
+    scheduled_time TIMESTAMPTZ DEFAULT NOW(),
+    retries INT DEFAULT 0,
+    max_retries INT DEFAULT 3,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_scheduled_time ON jobs(scheduled_time);
+CREATE INDEX idx_status ON jobs(status);
+
